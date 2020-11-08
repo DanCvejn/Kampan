@@ -1,0 +1,328 @@
+html, body { margin: 0; padding: 0; scroll-behavior: smooth;}
+
+body {
+    background-color: black;
+    font-family: "Overpass";
+    overflow: hidden;
+    animation: body 1s 33s forwards;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.video, video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+video {
+    opacity: 1;
+    animation: video .5s 30s forwards linear;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: background .5s 30s forwards linear;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: overlay 1s linear forwards;
+    z-index: 10;
+}
+
+.overlay div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay h1 {
+    position: relative;
+    margin: 0;
+    color: white;
+    letter-spacing: 20px;
+    font-size: 7em;
+    text-align: center;
+    font-weight: 700;
+    transform: translateX(-150%);
+    animation: nadpis .5s 1s ease-in forwards;
+}
+
+.overlay h2 {
+    position: relative;
+    margin: 0;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 400;
+    transform: translateX(-150%);
+    animation: nadpis .5s 6s ease-in forwards;
+}
+
+
+.overlay h1::after {
+    content: "NON_STOP";
+    position: absolute;
+    bottom: -37%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    overflow: hidden;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    opacity: 0;
+    animation: stroke1 2.3s 1.8s ease-out forwards alternate 2;
+}
+
+.overlay h1::before {
+    content: "NON_STOP";
+    position: absolute;
+    bottom: -49%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    line-height: 5px;
+    overflow: hidden;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    opacity: 0;
+    animation: stroke2 2.3s 1.8s ease-out forwards alternate 2;
+}
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: scroll .3s 3s ease-in forwards;
+}
+
+.scroll img {
+    height: 50px;
+    width: 50px;
+    transform: rotate(-90deg);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00000086;
+    transform: translateY(-100%);
+    animation: menu .3s 2s ease-in forwards;
+}
+
+.menu > a {
+    color: white;
+    text-decoration: none;
+    padding: 40px 50px;
+    margin-left: 100px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 45px 50px;
+}
+
+.menu a {
+    font-size: 1.5em;
+    position: relative;
+    transition: .3s .2s;
+    z-index: 2;
+    font-weight: 300;
+    -webkit-text-stroke-color: transparent;
+    transform: scale(1);
+}
+
+.menu a::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 0%;
+    height: 2px;
+    content: "";
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.menu a:hover {
+    font-weight: 900;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1.2px;
+}
+
+.menu a:hover::before {
+    animation: button .5s linear forwards;
+}
+
+
+
+/* Animace */
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes nadpis {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(-0%);
+    }
+}
+
+@keyframes stroke1 {
+    0% {
+        bottom: -37%;
+        opacity: 0;
+    }
+    12% {
+        bottom: -75%;
+        opacity: .4;
+    }
+    100% {
+        bottom: -75%;
+        opacity: .4;
+    }
+}
+
+@keyframes stroke2 {
+    0% {
+        bottom: -49%;
+        opacity: 0;
+    }
+    12% {
+        bottom: -115%;
+        opacity: .2;
+    }
+    100% {
+        bottom: -115%;
+        opacity: .2;
+    }
+}
+
+@keyframes button {
+    0% {
+        width: 0%;
+    }
+    50% {
+        top: 50%;
+        transform: translateY(-0%);
+        width: 100%;
+        height: 2px;
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes menu {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-0%);
+        opacity: 1;
+    }
+}
+
+@keyframes body {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: auto;
+    }
+}
+
+@keyframes scroll {
+    from {
+        bottom: 10%;
+        opacity: 0;
+    }
+    50% {
+        opacity: .2;
+    }
+    to {
+        bottom: 5%;
+        opacity: 1;
+    }
+}
+
+@keyframes background {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes video {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
