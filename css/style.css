@@ -303,6 +303,65 @@ footer {
 }
 
 
+/* Preorder */
+
+.preorder-site {
+    overflow: auto;
+    animation: none;
+}
+
+.preorder-site .overlay h1::before, .preorder-site .overlay h1::after {
+    display: none;
+    animation: none;
+}
+
+.preorder-site .overlay h1 {
+    animation: nadpis .5s ease-in forwards;
+}
+
+
+.preorder-site .overlay h2 {
+    animation: nadpis .5s .5s ease-in forwards;
+}
+
+.preorder-site .menu {
+    transform: translateY(0%);
+    animation: none;
+}
+
+.preorder-site .scroll {
+    display: none;
+}
+
+.preorder-site .background {
+    position: relative;
+    height: 40vh;
+    animation: background .5s 0s forwards linear;
+    background-position: center;
+}
+
+.buynow h3 {
+    color: white;
+    font-size: 2em;
+    letter-spacing: 5px;
+    padding: 10px 0px;
+    transition: .3s ease-out;
+}
+
+.buynow .membership {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.membership a {
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+
 /* Animace */
 
 @keyframes overlay {
