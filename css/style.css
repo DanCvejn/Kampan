@@ -3,8 +3,6 @@ html, body { margin: 0; padding: 0; scroll-behavior: smooth;}
 body {
     background-color: black;
     font-family: "Overpass";
-    overflow: hidden;
-    animation: body 1s 3s forwards;
 }
 
 body > div {
@@ -341,28 +339,125 @@ footer {
     position: relative;
     height: 40vh;
     animation: background .5s 0s forwards linear;
-    background-position: center;
+    background-position: center !important;
 }
 
 .buynow h3 {
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 5px;
-    padding: 10px 0px;
+    margin: 0;
+    padding: -10px 0px;
     transition: .3s ease-out;
+}
+
+.buynow .text {
+    height: 600px;
+}
+
+.buynow .text img {
+    width: 300px;
+}
+
+.buynow .text p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.buynow .text:hover {
+    background-color: #ffffff15;
 }
 
 .buynow .membership {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
 }
 
-.membership a {
+.text button {
+    margin: 0px 30px;
+    padding: 15px 60px;
+    background-color: #ff9100;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    border: 1px solid transparent;
+    transition: .4s;
+    outline-width: 0px;
+    outline-offset: 0px;
+    cursor: pointer;
+    font-family: "Overpass";
+}
+
+.text button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid #ff9100;
+}
+
+.membership button {
     padding: 15px 20px;
     font-size: 20px;
+    background-color: #ff9100;
+    color: black;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: .4s;
+}
+
+.membership button:hover {
+background-color: black;
+color: white;
+border: 1px solid #ff9100;
+}
+
+
+
+/* Alert */
+
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000a1;
+    z-index: 20;
+}
+
+.alert div {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    border: 3px solid #ff9100;
+    z-index: 30;
+}
+
+.alert h2 {
+    color: white;
+    font-size: 4em;
+    padding: 50px 0px;
+    padding-bottom: 0px;
+}
+
+.alert p {
+    font-size: 2em;
+}
+
+.alert-on {
+    display: flex;
 }
 
 
@@ -442,15 +537,6 @@ footer {
     to {
         transform: translateY(-0%);
         opacity: 1;
-    }
-}
-
-@keyframes body {
-    from {
-        overflow: hidden;
-    }
-    to {
-        overflow: auto;
     }
 }
 

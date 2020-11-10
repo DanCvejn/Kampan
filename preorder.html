@@ -6,6 +6,7 @@
     <title>NON_STOP | Preorder</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/aos.css">
 </head>
 <body class="preorder-site">
     <header>
@@ -29,32 +30,104 @@
     </header>
 
     <main>
+        <div class="alert">
+            <div>
+                <h2>Do not be silly</h2>
+                <p><span class="orange">Just go sleep</span></p>
+            </div>
+        </div>
         <section class="buynow">
-            <h2>Buy now</h2>
+            <h2 data-aos="fade-zoom-in" data-aos-duration="1000">Buy now</h2>
             <div class="content">
-                <div class="text">
-                    <h3>Get free one</h3>
-                    <p>Buy one pack and get another for <span class="orange">free</span></p>
-                    <p>Now only for:</p>
-                    <a href="#">24,90€</a>
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="100">
+                    <img src="./img/obal.png" alt="package">
+                    <h3>HALF_NIGHT</h3>
+                    <p>Drink and work for the half of the night</p>
+                    <p><span class="orange">200 g/pack</span></p>
+                    <button class="silly">9,90€</button>
                 </div>
-                <div class="text">
-                    <h3>Special package</h3>
-                    <p>Buy our <span class="orange">special package</span> and get 4 packs of our coffee and get one <span class="orange">free</span></p>
-                    <p>Now only for:</p>
-                    <a href="#">89,90€</a>
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="300">
+                    <img src="./img/obalx2.png" alt="package">
+                    <h3>HALF_NIGHT</h3>
+                    <p>Drink and work for the half of the night</p>
+                    <p>Special offer of <span class="orange">2</span></p>
+                    <button class="silly">16,90€</button>
                 </div>
-                <div class="text">
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="500">
+                    <img src="./img/boxof4.png" alt="package">
+                    <h3>HALF_NIGHT</h3>
+                    <p>Drink and work for the half of the night</p>
+                    <p>Special box of <span class="orange">4</span> packs</p>
+                    <button class="silly">34,90€</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="100">
+                    <img src="./img/obal2.png" alt="package">
+                    <h3>FULL_NIGHT</h3>
+                    <p>Drink and work for the whole night</p>
+                    <button class="silly">11,90€</button>
+                </div>
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="300">
+                    <img src="./img/obal2x2.png" alt="package">
+                    <h3>FULL_NIGHT</h3>
+                    <p>Drink and work for the whole night</p>
+                    <p>Special offer of <span class="orange">2</span></p>
+                    <button class="silly">19,90€</button>
+                </div>
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="500">
+                    <img src="./img/boxof4.png" alt="package">
+                    <h3>FULL_NIGHT</h3>
+                    <p>Drink and work for the whole night</p>
+                    <p>Special box of <span class="orange">4</span> packs</p>
+                    <button class="silly">41,90€</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="100">
+                    <img src="./img/obal3.png" alt="package">
+                    <h3>NON_STOP</h3>
+                    <p>You will work for whole damn 24 hours</p>
+                    <button class="silly">14,90€</button>
+                </div>
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="300">
+                    <img src="./img/obal3x2.png" alt="package">
+                    <h3>NON_STOP</h3>
+                    <p>You will work for whole damn 24 hours</p>
+                    <p>Special offer of <span class="orange">2</span></p>
+                    <button class="silly">26,90€</button>
+                </div>
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="500">
+                    <img src="./img/boxof4.png" alt="package">
+                    <h3>NON_STOP</h3>
+                    <p>You will work for whole damn 24 hours</p>
+                    <p>Special box of <span class="orange">4</span> packs</p>
+                    <button class="silly">51,90€</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text" data-aos="fade-bottom" data-aos-duration="700" data-aos-delay="300">
+                    <img src="./img/membership.png" alt="package">
                     <h3>Membership package</h3>
-                    <p>We will send you every month <span class="orange">2 packs</span> and sometimes <span class="orange">gift</span> for your help</p>
+                    <p>We will send you every month <span class="orange">2 packs</span> by your choice and sometimes <span class="orange">gift</span> for your help</p>
                     <p>Now only for:</p>
                     <div class="membership">
-                        <a href="#">39,90€/month</a>
-                        <a href="#">449,90€/year</a>
+                        <button class="silly">21,90€/month</button>
+                        <button class="silly">249,90€/year</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <script src="./aos.js"></script>
+    <script type="text/javascript">
+        AOS.init();
+    </script>
+
 </body>
 </html>
